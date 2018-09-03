@@ -10,3 +10,13 @@ app.set('view engine', 'ejs');
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
 app.use(express.static('public'));
+
+// Redirect to the 8ball
+app.get('/', (req, res) => {
+   res.redirect('/magicball');
+});
+
+// Show the 8ball
+app.get('/magicball', (req, res) => {
+   res.render('magicball.ejs', { post: '' });
+});
