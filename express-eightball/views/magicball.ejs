@@ -9,11 +9,12 @@
 
   <h2>Ask the magic 8ball</h2>
 
-  <form action='/search' method='POST'>
+  <form action='/ask' method='POST'>
     Question : <input type='text' name='question'><br /><br />
     <button type='submit'>Ask!</button>
   </form>
-
+  <p><%= question%></p>
+  <p>Answer: <%= answer%></p>
   <br />
   <br />
   <br />
